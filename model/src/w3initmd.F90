@@ -4785,8 +4785,8 @@ CONTAINS
 #ifdef W3_MPIT
               WRITE (NDST,9021) IH, 'R CX', IFROM, IT, IRQRS(IH), IERR
 #endif
-              IH     = IT0 + 5
-              IT     = IT + 1
+              IH     = IH + 1
+              IT     = IT0 + 5
               CALL MPI_RECV_INIT (CY   (I0),1,WW3_FIELD_VEC, &
                    IFROM, IT, MPI_COMM_WAVE, IRQRS(IH), IERR )
 #ifdef W3_MPIT
